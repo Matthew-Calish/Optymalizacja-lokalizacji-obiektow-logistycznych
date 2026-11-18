@@ -1,0 +1,8 @@
+scenario_id,capacity_multiplier,fixed_cost_multiplier,demand_multiplier,scenario_family
+base,1.000000,1.000000,1.000000,baseline
+capacity75,0.750000,1.000000,1.000000,capacity
+capacity125,1.250000,1.000000,1.000000,capacity
+fixed80,1.000000,0.800000,1.000000,fixed_cost
+fixed120,1.000000,1.200000,1.000000,fixed_cost
+demand110,1.000000,1.000000,1.100000,demand
+demand120,1.000000,1.000000,1.200000,demand

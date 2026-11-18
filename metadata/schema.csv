@@ -1,0 +1,40 @@
+file,column,type,meaning
+customers.csv,customer_id,string,Unikalny identyfikator klienta.
+customers.csv,x,float,Współrzędna X klienta.
+customers.csv,y,float,Współrzędna Y klienta.
+customers.csv,demand,float,Bazowy popyt klienta.
+facilities.csv,facility_id,string,Unikalny identyfikator lokalizacji kandydackiej.
+facilities.csv,x,float,Współrzędna X lokalizacji.
+facilities.csv,y,float,Współrzędna Y lokalizacji.
+facilities.csv,fixed_cost,float,Bazowy koszt otwarcia obiektu.
+facilities.csv,capacity_min,float,Minimalna pojemność operacyjna; może być opcjonalna.
+facilities.csv,capacity_max,float,Maksymalna bazowa pojemność.
+facilities.csv,capacity,float,"Pojemność wykorzystywana przez model w danych przetworzonych, jeśli występuje."
+transport_cost.csv,customer_id,string,Identyfikator klienta.
+transport_cost.csv,facility_id,string,Identyfikator obiektu.
+transport_cost.csv,cost_per_unit,float,Koszt przypisania/obsługi jednej jednostki popytu.
+scenario_config.csv,scenario_id,string,Identyfikator scenariusza eksperymentalnego.
+scenario_config.csv,capacity_multiplier,float,Mnożnik pojemności obiektu.
+scenario_config.csv,fixed_cost_multiplier,float,Mnożnik kosztu otwarcia obiektu.
+scenario_config.csv,demand_multiplier,float,Mnożnik popytu; dodawany przez ETL dla przetworzonych danych.
+scenario_config.csv,scenario_family,string,Kategoria scenariusza; dodawana przez ETL dla przetworzonych danych.
+demand_scenarios.csv,scenario_id,string,"Scenariusz, dla którego policzono popyt."
+demand_scenarios.csv,customer_id,string,"Klient, którego popyt dotyczy."
+demand_scenarios.csv,demand_multiplier,float,Mnożnik bazowego popytu klienta w danym scenariuszu.
+demand_scenarios.csv,demand,float,Popyt scenariuszowy = popyt bazowy × demand_multiplier; wartość do użycia w modelu.
+facility_scenarios.csv,scenario_id,string,Scenariusz parametrów obiektu.
+facility_scenarios.csv,facility_id,string,Lokalizacja kandydacka.
+facility_scenarios.csv,x,float,Współrzędna X lokalizacji.
+facility_scenarios.csv,y,float,Współrzędna Y lokalizacji.
+facility_scenarios.csv,fixed_cost_scenario,float,Koszt otwarcia po zastosowaniu mnożnika scenariusza.
+facility_scenarios.csv,capacity_min,float,"Minimalna pojemność operacyjna, jeśli jest używana."
+facility_scenarios.csv,capacity_scenario,float,Pojemność po zastosowaniu mnożnika scenariusza.
+facility_scenarios.csv,capacity_multiplier,float,Mnożnik pojemności zastosowany w scenariuszu.
+facility_scenarios.csv,fixed_cost_multiplier,float,Mnożnik kosztu otwarcia zastosowany w scenariuszu.
+instance_meta.csv,scale,string,Poziom instancji; tutaj large.
+instance_meta.csv,n_customers,integer,Liczba klientów.
+instance_meta.csv,n_facilities,integer,Liczba obiektów kandydackich.
+instance_meta.csv,n_arcs,integer,Liczba par klient–obiekt w macierzy kosztów.
+instance_meta.csv,n_scenarios,integer,Liczba scenariuszy.
+instance_meta.csv,total_base_demand,float,Łączny popyt bazowy.
+instance_meta.csv,total_base_capacity,float,Łączna bazowa pojemność obiektów.
